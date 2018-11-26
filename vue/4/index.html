@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This is vue filter</title>
+	</head>
+	
+	<body>
+		<div id="a">
+			<h3>This filter vue</h3>
+			<p>{{  name | upper }}</p>
+			<p>{{  dep | upper }}</p>
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+		<script>
+			new Vue({
+				el:"#a",
+				data:{
+					name:"Prolay",
+					dep:"CSE"
+				},
+				filters:{
+					upper:function(s){
+						return s.toUpperCase();
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>

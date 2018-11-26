@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This is vue function</title>
+		
+	</head>
+	<body>
+		<h3>This is our vue.js function</h3>
+		<div id="a">
+			<p>{{ message }}</p>
+			<button v-on:click="resverveMessage">click</button>
+		</div>
+		
+		
+		<div id="b">
+			<h1>This is my skills</h1>
+			<ul>
+				<li v-for="(skill,i) in skills">
+					<p>{{ skill }}</p>
+				</li>
+			</ul>
+			<input type="text" v-model="newSkill">
+			<button v-on:click="addNewSkill">Add</button>
+		</div>
+		
+		
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+		
+		<script>
+			new Vue({
+				el:'#a',
+				data:{
+					message:'prolay'
+				},
+				methods:{
+					resverveMessage:function(){
+						 this.message = this.message.split('').reverse().join('')
+					}
+				}
+				
+			
+			})
+			
+			
+			new Vue({
+				el:'#b',
+				data:{
+					newSkill:"",
+					skills:["html","css","java"]
+				},
+				methods:{
+					addNewSkill:function(){
+						 this.skills.push(this.newSkill);
+						 this.newSkill="";
+					}
+				}
+				
+			
+			})
+			
+			
+		</script>
+	</body>
+</html>

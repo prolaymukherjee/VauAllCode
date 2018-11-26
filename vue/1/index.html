@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This is vue</title>
+		<link >
+	</head>
+	<body>
+		<h3>This is start vue Framwork</h3>
+		<div id="p">
+			{{name}}
+		<div>
+		<div id="r">
+			<h2 v-bind:title="message">prolay</h2>
+		</div>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+		<script>
+			new Vue({
+				el:'#p',
+				data:{
+					name:'prolay'
+				}
+			
+			
+			})
+			
+			new Vue({
+				el:'#r',
+				data:{
+					message:"Time is"
+				}
+			
+			
+			})
+		</script>
+	</body>
+</html>
